@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/3a22411ee2.js" crossorigin="anonymous"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homepage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="Homepage.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+</head>
+<body>  
+    <div class="transparent">
+    <div class="header-bar">
+            <div class="logo"></div>
+            <ul class="slider-menu">
+               <a href="Homepage.html"> Home</a>
+               <a href="Contact.html">  <li>Contact</li></a> 
+               <a href="Methods.html"> <li>Methods</li> </a>
+            </ul>
+        </div><!-- logo --> 
+        <div class= "middle">
+           
+          <div class="middle_left"> 
+              <div class="scrolling_text" style="color: rgb(10, 235, 28);">
+                 <p>Coordinates can be find by searching the city name</p> 
+              </div>           
+          <input type="text" id="city" name="city" placeholder="Enter City">
+          <i class="fa-solid fa-magnifying-glass fa-1x" onclick = "getCoordinates()" style=cursor:pointer></i>          
+          <br>
+          <input type="text" id="latitude" name="latitude" placeholder="Enter Latitude"><i class="fa-solid fa-delete-left fa-1x" onclick="clean_latitude()"></i><br><br>   
+          <input type="text" id="longtitude" name="longitude" placeholder="Enter Longtitude"><i class="fa-solid fa-delete-left fa-1x" onclick="clean_longtitude()"></i><br><br> 
+          <input type="text" id="t_angle" name="t_angle" placeholder="Tilt Angle"><i class="fa-solid fa-delete-left fa-1x" onclick="clean_longtitude()"></i><br><br> 
+            <div class="year">
+                <input type="text" id="starting_date" name="starting_date" placeholder="Starting Year">
+                <input type="text" id="ending_date" name="ending_date" placeholder="Ending Year">  
+            </div> <!-- year -->
+            <br>          
+          <button onclick="getData_ALLSKY_KT(); getData_CLRSKY_SFC_SW_DWN(); getData_ALLSKY_SFC_SW_DWN(); 
+          getData_CLRSKY_SFC_SW_DNI(); getData_CLRSKY_SFC_SW_DIFF();getData_CLRSKY_SRF_ALB(); getData_ALLSKY_SFC_SW_DNI();
+          getData_ALLSKY_SFC_SW_DNI();getData_ALLSKY_SFC_SW_DIFF(); getData_ALLSKY_SRF_ALB();sun_rise(); setTimeout(calculate, 9000)" class="button_fetch_data">Calculate</button>  
+            </div>  <!-- middle_left -->   
+                <label id="latitude_output"></label>
+                <label id="longtitude_output"></label>
+        </div> <!-- middle -->                       
+                <div class="graph"> <!-- canvas -->  
+                    <div class="c">
+                    <canvas id="All Sky Insolation Clearness Index:"style="height:200; width:200;"></canvas>
+                    </div>
+                    <div class="c">
+                    <canvas id="All Sky Surface Shortwave Downward Irradiance:"style="height:200; width:200;"></canvas>
+                    </div>
+                    <div class="c">
+                    <canvas id="Clear Sky Surface Shortwave Downward Irradiance:"style="height:200; width:200;"></canvas>
+                    </div>
+                    <div class="c">
+                        <canvas id="Clear Sky Shortwawe Direct Normal Irradiance:"style="height:200; width:200;"></canvas>
+                    </div> 
+                    <div class="c">
+                        <canvas id="Clear Sky Shortwawe Diffusion Irradiance:"style="height:200; width:200;"></canvas>
+                    </div> 
+                    <div class="c">
+                        <canvas id="Clear Sky Surface Albedo:"style="height:200; width:200;"></canvas>
+                    </div> 
+                    <div class="c">
+                        <canvas id="All Sky Direct Normal Irradiance:"style="height:200; width:200;"></canvas>
+                    </div> 
+                    <div class="c">
+                        <canvas id="All Sky Shortwawe Diffusion:"style="height:200; width:200;"></canvas>
+                    </div>   
+                    <div class="c">
+                        <canvas id="All Sky Albedo:"style="height:200; width:200;"></canvas>
+                    </div>                   
+                    </div>  <!-- canvas -->  
+                    <div class="result_graph">
+                    <canvas id="results" style=" height: 250; width: 600;"></canvas>  
+                </div>
+</body>
+</div>   <!-- transparent -->  
+<div class="footer"> <!-- Footer --> 
+         <footer>
+         <div class="social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-snapchat"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Terms</a></li>
+            <li"><a href="#">Privacy Policy</a></li>
+            </ul>  
+         </footer>
+    </div> <!-- Footer End --> 
+</html>

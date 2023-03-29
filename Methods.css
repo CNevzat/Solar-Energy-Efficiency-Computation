@@ -1,0 +1,84 @@
+body{
+    background-image: url('Images/Earth.png');
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+.transparent{
+  background: rgba(0, 0, 0,.7);
+  height:110vh;
+  width: 100%;
+}
+.logo{
+  background-image: url('Images/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20vh;
+  height: 20vh;
+  float: left;  
+}
+.header-bar {
+	width: 99%;
+	height:20vh;
+	border: 10px solid transparent;
+	box-shadow: 4px 4px 5px rgba(0, 166, 255, 0.25) inset; 
+}
+.header-bar::after {
+	content: '';
+	position: absolute;
+	width: 85%;
+	height: 80px;
+	border: 10px solid transparent;
+	transition: 0.3s linear all;
+  border-top: 10px solid rgba(233, 155, 10);
+	border-left: 10px solid rgba(233, 155, 10);
+}
+.slider-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	z-index: 1;
+  margin-right: 50px;
+  margin-top:50px ;
+  padding-left: 50px;
+}
+.slider-menu > li {
+	padding: 20px;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+  font-size: 20px;
+}
+.slider-menu > li:hover {
+	color:rgb(255, 255, 255);
+	background-color: #e99b0a;
+  border-radius: 50%;
+}
+a {
+  padding: 20px;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+  font-size: 20px;
+  text-decoration: none;
+}
+a:hover{
+  color:rgb(255, 255, 255);
+	background-color: #e99b0a;
+  border-radius: 50%;
+}
+.text{
+    float: left;
+    width:100vh;
+    margin-left:50vh;
+    margin-top: 5vh;
+    margin-right: 100px;
+text-align: left;
+color: aliceblue;
+font-size:x-large;
+}
